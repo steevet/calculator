@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+body {
+  background: #282c34;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: 'Tilt Prism', cursive;
+  font-size: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);  /* what is that  */
+  margin: 0 auto;    /* what is that  */
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  border: 10px solid #101116;
+  background: #101116;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /*The repeat() CSS function represents a repeated fragment of 
+  the track list, allowing a large number of columns or rows that 
+  exhibit a recurring pattern to be written in a more compact form.*/
+  grid-auto-rows: minmax(60px, auto);
+}
+
+.input {
+  margin-right: -230px;
+  height: 75px;
+  width: 248px;
+  background-color: #101116;
+  border: 0px;
+  color: #ffffff;
+  text-align: right;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+#clear {
+  grid-column: 1/5;
+  grid-row: 1;
+  color: #262834;
+}
+
+/* #result {
+  grid-column: 3/5;
+  grid-row: 5;
+} */
+
+#equal {
+  grid-column: 1/5;
+  grid-row: 6;
+  color: #262834;
+}
+
+#delete {
+  color: #262834;
+}
+
+button {
+  margin: 5px;
+  /* border: none; */
+  border-radius: 5px;
+  cursor: pointer;
+  background: #262834;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+.hilight {
+  background: #56cbdb;
+  /* background-color: #ffffff; */
+
+}
+
+.title {
+  color: #ffffff;
 }
